@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+footer {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    margin-right: 40px;
+    color: black;
+    font-weight: 700;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+/* Коды для header////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.header-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.header-wrapper {
+    width: 100%;
+    background: #f5f5f5;
+    padding: 5px;
+}
+
+.header-wrapper2 {
+    width: 75%;
+    background: white;
+    padding: 10px;
+}
+
+.header-wrapper2 img {
+    width: 40px;
+    margin-left: 25px;
+}
+
+.header-wrapper2 nav a {
+    margin-left: 43px;
+}
+
+.active-link {
+    opacity: 1;
+}
+
+.break {
+    background: #f5f5f5;
+    height: 2em;
+}
+
+.break-white {
+    background: white;
+    height: 2em;
+}
+
+/* Коды для кнопок////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+p {
+    color: black;
+}
+
+button {
+    cursor: pointer;
+    padding: 15px 35px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Коды для POSTER////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#banner {
+    text-align: center;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    transition: 5s;
+    margin-bottom: 2em;
+    height: auto;
+}
+
+.banner-img {
+    padding: 0;
+    margin: 30px;
+    border-radius: 20px;
+    width: 95vw;
+}
+
+.frame {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    perspective: 500px;
+}
+
+.details-mob {
+    display: none;
+    width: 80vw;
+    margin: 1em 10vw;
+}
+
+.frame .details {
+    width: 50%;
+    height: 50%;
+    padding: 5% 8%;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(90deg);
+    transform-origin: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+.frame:hover .details {
+    transform: translate(-50%, -50%) rotateY(0deg);
+    opacity: 1;
+}
+
+.banner-link {
+    opacity: 1;
+    position: relative;
+    text-align: center;
+}
+
+.banner-link:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #000000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.banner-link:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.banner-slider {
+    display: flex;
+    width: max-content;
+}
+
+/* Коды для CARDS////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#tours {
+    margin: 2em auto;
+}
+
+.tours-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tours-panel {
+    width: 60%;
+    margin: 2em auto;
+    display: flex;
+}
+
+.tours-panel form {
+    width: 80%;
+}
+
+.tours-panel button {
+    width: 20%;
+}
+
+.tours-panel button:hover {
+    -webkit-box-shadow: 0 0 20px 0 rgb(207, 205, 205);
+    box-shadow: 0 0 20px 0 rgb(209, 209, 209);
+}
+
+
+.tours-text {
+    display: flex;
+    margin: 10px 50px;
+    width: 100%;
+}
+
+.tours-text h1 {
+    width: 85%;
+}
+
+.cards-row {
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards-row .card {
+    width: 25%;
+    margin: 0 2%;
+}
+
+.card img {
+    text-align: center;
+    margin-top: 50px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+/* Коды для CONTACT US////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#contact {
+    margin: 2em 0;
+}
+
+.contact-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contact-text {
+    text-align: center;
+}
+
+.contact-text h1 {
+    font-size: 2rem;
+}
+
+.contact-form {
+    margin: 1.5em 0;
+}
+
+.contact-container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 0 20px 0 rgb(207, 205, 205);
+    box-shadow: 0 0 20px 0 rgb(209, 209, 209);
+    width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.contact-container>* {
+    padding: 20px;
+}
+
+.input-container,
+.input-container input {
+    border: none;
+    outline: none;
+}
+
+.input-container {
+    width: 60%;
+    padding-left: 40px;
+}
+
+.input-container input {
+    width: 90%;
+    font-size: 1rem;
+}
+
+.btn-contact-us {
+    background-color: black;
+    color: white;
+    width: 40%;
+    padding: 15px 25px;
+    margin: 0 auto;
+    display: block;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.contact-labels {
+    text-align: center;
+}
+
+.terms {
+    text-align: center;
+    margin: 1em 0;
+}
+
+.container-signin {
+    background-color: #f1f1f1;
+    text-align: center;
+    display: block;
+    width: 40%;
+    padding-left: 200px;
+    padding: 15px 25px;
+    margin: 0 auto;
+
+}
+
+/* Коды для Profile////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+#profile {
+    margin: 2em 0;
+}
+
+.profile-wrapper {
+    width: 80%;
+    margin: 4em auto 12em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-form {
+    margin-top: 4em;
+    width: 50%;
+}
+
+.profile-images {
+    width: 40%;
+    position: relative;
+}
+
+.profile-img1 {
+    width: 55%;
+    height: auto;
+    border-radius: 60px;
+    position: absolute;
+    left: 0%;
+    top: -30%;
+    z-index: 0;
+    transition: 1s;
+}
+
+.profile-images:hover .profile-img1 {
+    left: 45%;
+    top: 20%;
+}
+
+.profile-img2 {
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    z-index: 1;
+    width: 55%;
+    height: auto;
+    border-radius: 60px;
+    transition: 1s;
+}
+
+.profile-images:hover .profile-img2 {
+    left: 0%;
+    top: -30%;
+}
+
+.profile-text {
+    text-align: center;
+}
+
+.profile-text h1 {
+    font-size: 2rem;
+}
+
+.profile-container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 100px;
+    -webkit-box-shadow: 0 0 20px 0 rgb(207, 205, 205);
+    box-shadow: 0 0 20px 0 rgb(209, 209, 209);
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profile-container>* {
+    padding: 20px;
+}
+
+/* Коды для ABOUT US////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.right-aligned {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+
+#projects {
+    background: black;
+
+}
+
+.projects-wrapper {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.projects-container>* {
+    margin-bottom: 175px;
+}
+
+.projects-container>*:last-child {
+    margin-bottom: 30px;
+}
+
+.project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.project-text button {
+    margin-top: 35px;
+}
+
+.project img {
+    width: 50%;
+}
+
+.project-text {
+    width: 40%;
+    margin-top: 40px;
+}
+
+.project-text hr {
+    width: 50px;
+    height: 2px;
+    background-color: black;
+    margin: 35px 0;
+}
+
+.project-text h1 {
+    font-size: 2.25rem;
+}
+
+.about-link {
+    opacity: 1;
+    color: white;
+    font-weight: 600;
+}
+
+.about-link:hover {
+    color: wheat;
+}
+
+/* Коды для FOOTER////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.footer {
+    background: #111;
+    height: 40vh;
+    color: rgb(7, 5, 5) !important;
+}
+
+.footer-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+
+.footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.links {
+    width: 100%;
+    font-size: 15px;
+}
+
+.links ul {
+    line-height: 1;
+    margin: 0 auto;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.links a {
+    color: wheat;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+/* Коды для OTHER////////////////////////////////////////////////////////////////////////////////////////////////// */
+.hidden {
+    display: none;
+}
+
+.header-bars {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+/* Коды для Адаптации////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 768px) {
+
+    .header-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .mobile-hidden {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        text-align: left;
+        margin: 5px 15px;
+        z-index: 1;
+        background-color: #f5f5f5;
+        padding: 10px;
+        -webkit-box-shadow: 0 0 20px 0 rgb(207, 205, 205);
+        box-shadow: 0 0 20px 0 rgb(209, 209, 209);
+
+    }
+
+    .header-wrapper2 nav a {
+        margin-left: 0;
+    }
+
+    .header-bars {
+        display: block;
+    }
+
+    .mobile-logo {
+        display: inline-block;
+    }
+
+    .web-logo {
+        display: none;
+    }
+
+    .footer-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .cards-row {
+        justify-content: center;
+    }
+
+    .cards-row .card {
+        width: 90%;
+    }
+
+    .card img {
+        margin-top: 2em;
+    }
+
+    .project {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .project img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .project-text {
+        width: auto;
+        margin-bottom: 2em;
+    }
+
+    .project-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-images {
+        display: none;
+    }
+
+    .profile-form {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .profile-wrapper {
+        margin: 1em auto 4em;
+    }
+
+    .contact-wrapper {
+        width: 90%;
+    }
+
+    .contact-container {
+        width: 80%;
+    }
+
+    .btn-contact-us,
+    .container-signin {
+        width: 70%;
+    }
+
+    #banner {
+        margin: 0;
+    }
+
+    .banner-img {
+        width: 80vw;
+        margin: 1em 10vw;
+    }
+
+    .frame {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .details {
+        display: none;
+    }
+
+    .details-mob {
+        display: block;
+    }
+}
